@@ -1,0 +1,127 @@
+
+.heading
+{
+    margin-top: 40px;
+}
+.container
+{
+    width:100vw;
+    height:100vh;
+    background: #000000e1;
+    position:absolute;
+    top:0px;
+    text-align:center;
+    color:white;
+}
+
+.form-card
+{
+    color:white;
+    position: relative;
+    top:42vh;
+    left:50vw;
+    transform: translate(-50%,-50%);
+    width:700px;
+    padding:50px;
+    border-radius: 5px;
+    background:linear-gradient(45deg,#2b0028,#75041c);
+}
+
+.input-group
+{
+    display:flex;
+    justify-content: space-between;
+    height:100px;
+    align-items: center;
+}
+
+.input-control input
+{
+    width:250px;
+    padding:8px 10px;
+    border:none;
+    border-radius: 3px;
+    outline:none;
+}
+
+.input-label
+{
+    
+    text-align: left;
+    margin-bottom:5px;
+
+}
+
+.input-validation
+{
+    visibility: hidden;
+}
+
+.invalid 
+{
+    visibility: visible;
+    font-size: 14px;
+    color:#a4e213e1;
+}
+
+.tandc input
+{
+    
+    width:15px;
+    height:10px;
+    
+}
+label{
+    font-size: 13px;
+}
+
+.tandc label
+{
+    font-size: 13px;
+    cursor:pointer;
+    user-select: none;
+}
+.button-group
+{
+    display:flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+
+.button-group button
+{
+    width:100px;
+    height:30px;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    line-height: 30px;
+    background:#ff0000;
+    color:white;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-submit button
+{
+    background:#00ac17;
+}
+
+.result-container
+{
+    transition: .3s ease-in-out;
+    position: absolute;
+    right:20px;
+    top:55vh;
+    width:300px;
+    height: 495px;
+    transform: translateY(-50%);
+    background:linear-gradient(45deg,#00000c,#04028b);
+    padding:20px;
+    border-radius: 6px;
+}
+
+
+

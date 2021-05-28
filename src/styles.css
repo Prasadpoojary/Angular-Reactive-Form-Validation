@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+*
+{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: url(./assets/Projectimg.jpg);
+    padding:0px;
+    margin-top:-21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

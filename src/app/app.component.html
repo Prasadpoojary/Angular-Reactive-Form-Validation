@@ -1,0 +1,106 @@
+<div class="container">
+  <h1 class="heading">SignUP</h1>
+    <form [formGroup]='registerForm' (ngSubmit)='onSubmit()'>
+        <div class="form-card">
+            <div class="input-group">
+                <div class="input-card">
+                    <div class="input-control">
+                        <div class="input-label">
+                            <label for="fname">Firstname</label>
+                        </div>
+                        <input type="text" name="" id="fname" formControlName='firstname'>
+                    </div>
+                    <div class="input-validation invalid"  *ngIf='submitted && h.firstname.errors && h.firstname.errors.required'>
+                        First name is required
+                    </div>
+                </div>
+                <div class="input-card">
+                    <div class="input-control">
+                        <div class="input-label">
+                            <label for="lname">Lastname</label>
+                        </div>
+                        <input type="text" name="" id="lname" formControlName='lastname'>
+                    </div>
+                    <div class="input-validation invalid" *ngIf='submitted && h.lastname.errors && h.lastname.errors.required'>
+                        Lastname is required
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="input-group">
+                <div class="input-card">
+                    <div class="input-control">
+                        <div class="input-label">
+                            <label for="pass">Password</label>
+                        </div>
+                        <input type="text" name="" id="pass" formControlName='password'>
+                    </div>
+                    <div class="input-validatio invalid" *ngIf='h.password.errors && h.password.errors.required && h.password.touched'>
+                        Password is required
+                    </div>
+
+                    <div class="input-validation invalid" *ngIf='h.password.errors && h.password.touched && h.password.errors.minlength && !h.password.errors.required'>
+                        Password should have more than 7 chars
+                    </div>
+                </div>
+                <div class="input-card">
+                    <div class="input-control">
+                        <div class="input-label">
+                            <label for="cpass">Confirm Password</label>
+                        </div>
+                        <input type="text" name="" id="cpass" formControlName='conpass'>
+                    </div>
+                    <div class="input-validation invalid"  *ngIf='h.conpass.errors && h.conpass.errors.required && h.conpass.touched'>
+                        Confirm Password is required
+                    </div>
+                    <div class="input-validation invalid" *ngIf='h.conpass.errors && h.conpass.touched && h.conpass.errors.missmatch && !h.conpass.errors.required'>
+                        Password missmatch
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-card">
+                    <div class="input-control">
+                        <div class="input-label">
+                            <label for="mail">E-mail ID</label>
+                        </div>
+                        <input type="email" name="" id="mail" formControlName='email'>
+                    </div>
+
+                    <div class="input-validation invalid"  *ngIf='submitted && h.email.errors && h.email.errors.required'>
+                        E-mail is required
+                    </div>
+                    <div class="input-validation invalid" *ngIf='submitted && h.email.errors && h.email.errors.email && !h.email.errors.required'>
+                        invalid E-mail
+                    </div>
+                </div>
+                <div class="input-card">
+                    <div class="input-control tandc">
+                        <input type="checkbox" name="" id="tandc" formControlName='tandc'>
+                        <label for="tandc">I accept the terms and conditions.</label>
+                    </div>
+                    <div class="input-validation invalid" *ngIf='submitted && h.tandc.errors'>
+                        Accept the Terms and conditions
+                    </div>
+                </div>
+            </div>
+            <div class="button-group">
+                <div class="button-submit">
+                    <button type="submit">SignUp</button>
+                </div>
+                <div class="button-reset">
+                    <button type= "button" (click)='onReset()'>Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+  <div class="result-container" *ngIf="submitted">
+     {{registerForm.value | json}}
+     <br>
+     <br>
+     <br>
+     Valid : {{registerForm.valid}}
+  </div>
+</div>
